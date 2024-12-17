@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/src/img/svg/icon.svg" type="image/x-icon">
+    <title>{% block title %}Spicy Restaurant{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block child_styles %}
+    <link rel="stylesheet" href="static/src/css/output.css">
+    {% endblock %}
+</head>
+<body>
+    <div class="border-2 h-24 flex px-4 w-full items-center justify-between">
+        <div class="flex items-center">
+            <h1 class="text-4xl font-semibold flex items-center space-x-2 w-full">
+                <a href="/" class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-8 w-8">
+                        <title>Spicy Restaurant Logo</title>
+                        <path fill-rule="evenodd" d="M17.303 5.197A7.5 7.5 0 0 0 6.697 15.803a.75.75 0 0 1-1.061 1.061A9 9 0 1 1 21 10.5a.75.75 0 0 1-1.5 0c0-1.92-.732-3.839-2.197-5.303Zm-2.121 2.121a4.5 4.5 0 0 0-6.364 6.364.75.75 0 1 1-1.06 1.06A6 6 0 1 1 18 10.5a.75.75 0 0 1-1.5 0c0-1.153-.44-2.303-1.318-3.182Zm-3.634 1.314a.75.75 0 0 1 .82.311l5.228 7.917a.75.75 0 0 1-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 0 1-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 0 1-1.247-.606l.569-9.47a.75.75 0 0 1 .554-.68Z" clip-rule="evenodd" />
+                    </svg>
+                    <span id="name">Spicy Restaurant</span>
+                </a>
+            </h1>
+        </div>
+        <div class="cursor-pointer flex items-center">
+            <button id="home" class="cursor-pointer font-bold">
+                <p>Home</p>
+            </button>
+            <div>
+                <svg id="down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+                <svg id="up" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden size-2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                </svg>
+            </div>
+            <div id="home-dropdown1" class="flex items-center hidden">
+                <p id="home1">home1</p>
+                <p id="home2">home2</p>
+            </div>
+        </div>      
+    </div>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    {% block child_main_scripts %}
+        <script src="static/src/js/home.js"></script>
+    {% endblock %}
+</body>
+</html>

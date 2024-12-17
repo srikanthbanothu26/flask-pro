@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="static\src\img\Hong_Hy_dove_as_the_messenger_for_Noah_2a6aa923-02ee-4852-8417-f8454689e7d7.ico" type="image/x-icon">
-    <title>Spicy Restaurant</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <div class="text-green-600 border-2 h-24" id="name">madhu</div>
-</body>
-<script src="./static/src/js/home.js" type="text/javascript"></script>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+Home | Spicy Restaurant
+{% endblock %}
+
+{% block content %}
+<div class="relative w-full h-96 bg-cover bg-center" id="Restaurant-img">
+    <div class="p-2 absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <h2 class="text-white text-3xl font-bold">Welcome to Spicy Restaurant</h2>
+    </div>
+</div>
+{% endblock %}
+
+{% block child_main_scripts %}
+<script src="static/src/js/home.js"></script>
+{% endblock %}
